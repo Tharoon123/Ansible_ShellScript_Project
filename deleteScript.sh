@@ -32,8 +32,8 @@ while true; do
             echo "The difference between the current date and the LastModified date is: $DATE_DIFF_DAYS days."
 
             # Check if the object is older than 7 days (7 days = 604800 seconds)
-            if [ "$DATE_DIFF_DAYS" -gt 7 ]; then
-                echo "This Object should be deleted!"
+            if [ "$DATE_DIFF_DAYS" -gt 0 ]; then
+                echo "Object: $OBJECT_KEY - Last modified date: $LAST_MODIFIED ----- > Delete !" >> /home/frappe15/ansible_shellScript_project/data.txt
             else
                 echo "Object: $OBJECT_KEY - Last modified date: $LAST_MODIFIED ----- > Keep this Object!"
             fi

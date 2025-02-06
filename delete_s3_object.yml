@@ -1,0 +1,5 @@
+- name: Delete an Object from Bucket
+  hosts: localhost
+  tasks:
+    - name: Delete an Object from Bucket using Python Script
+      command: python3 delete_s3_bucket_obj.py
